@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+
+    function power(val, pow) {
+        if (pow == 1) {
+        return val;
+        } else {
+            return val * power(val, pow - 1);
+        }
+    }
+    let val = prompt('число:');
+    let pow = prompt('степень:');
+
+    if (pow < 1) {
+        alert (`Степень ${pow} не поддерживается. Используйте натуральное число`);
+    } else {
+        alert(power(val, pow));
+    }
+
+</script>
